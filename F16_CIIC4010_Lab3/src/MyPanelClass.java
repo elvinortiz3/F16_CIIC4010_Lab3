@@ -18,13 +18,20 @@ public class MyPanelClass extends JPanel {
 		int width = x2 - x1;
 		int height = y2 - y1;
 
+		double x = getWidth();
 		//Paint the background
-		g.setColor(Color.GRAY);
+		g.setColor(Color.RED);
 		g.fillRect(x1, y1, width+1, height+1);
 
-		//Draw a border
-//		g.setColor(Color.YELLOW);
-//		g.drawRect(x1, y1, width, height);
+		//Dibujar primera franja blanca		g.setColor(Color.WHITE);
+		g.setColor(Color.WHITE);
+		g.fillRect(x1, 25, width+1, 35);
+				
+		g.setColor(Color.WHITE);
+		g.fillRect(x1, 115, width+1, 35);
+//		
+//		g.setColor(Color.WHITE);
+		//g.fillRect(x1, 0, width+1, (height+1)/5);
 //
 //		g.setColor(Color.BLACK);
 //		g.drawRect(x1+10, y1+10, width-20, height-20);
@@ -46,22 +53,29 @@ public class MyPanelClass extends JPanel {
 //          g.setColor(Color.YELLOW);
 //          g.fillPolygon(p);
 		
+		  Polygon p3 = new Polygon();
+		  p3.addPoint(0,0);
+          p3.addPoint(0, getHeight());
+          p3.addPoint(x1+115,getHeight()/2);
+          g.setColor(Color.BLUE);
+          g.fillPolygon(p3);
+          
 		  Polygon p2 = new Polygon();
-          p2.addPoint(x1 + 25, y1 + 73);
-          p2.addPoint(x1 + 41, y1 + 73);
-          p2.addPoint(x1 + 47, y1 + 58);
-          p2.addPoint(x1 + 53, y1 + 73);
-          p2.addPoint(x1 + 69, y1 + 73);
-          p2.addPoint(x1 + 56, y1 + 83);
-          p2.addPoint(x1 + 61, y1 + 98);
-          p2.addPoint(x1 + 47, y1 + 88);
-          p2.addPoint(x1 + 34, y1 + 98);
-          p2.addPoint(x1 + 38, y1 + 83);
+          p2.addPoint(x1 + 25, y1 + 83);
+          p2.addPoint(x1 + 41, y1 + 83);
+          p2.addPoint(x1 + 47, y1 + 68);
+          p2.addPoint(x1 + 53, y1 + 83);
+          p2.addPoint(x1 + 69, y1 + 83);
+          p2.addPoint(x1 + 56, y1 + 93);
+          p2.addPoint(x1 + 61, y1 + 108);
+          p2.addPoint(x1 + 47, y1 + 98);
+          p2.addPoint(x1 + 34, y1 + 108);
+          p2.addPoint(x1 + 38, y1 + 93);
           g.setColor(Color.WHITE);
-          g.drawPolygon(p2);
+          g.fillPolygon(p2);
 		
-        g.setColor(Color.LIGHT_GRAY);
-        g.fillOval((width-55)/2, (height-55)/2, 55, 55);
+//        g.setColor(Color.LIGHT_GRAY);
+//        g.fillOval((width-55)/2, (height-55)/2, 55, 55);
 
 	}
 }
