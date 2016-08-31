@@ -18,17 +18,26 @@ public class MyPanelClass extends JPanel {
 		int width = x2 - x1;
 		int height = y2 - y1;
 
-		double x = getWidth();
+		
 		//Paint the background
 		g.setColor(Color.RED);
 		g.fillRect(x1, y1, width+1, height+1);
 
-		//Dibujar primera franja blanca		g.setColor(Color.WHITE);
+		
+		
+		//Dibujar primera franja blanca	
 		g.setColor(Color.WHITE);
-		g.fillRect(x1, 25, width+1, 35);
+		g.fillRect(x1, 25, width+1, height/5);
 				
+		
+		
+		//Dibujar segunda franja blanca	
 		g.setColor(Color.WHITE);
-		g.fillRect(x1, 115, width+1, 35);
+		g.fillRect(x1, 115, width+1,height/5);
+		
+		
+		
+		
 //		
 //		g.setColor(Color.WHITE);
 		//g.fillRect(x1, 0, width+1, (height+1)/5);
@@ -53,6 +62,8 @@ public class MyPanelClass extends JPanel {
 //          g.setColor(Color.YELLOW);
 //          g.fillPolygon(p);
 		
+		
+		//Triangulo azul
 		  Polygon p3 = new Polygon();
 		  p3.addPoint(0,0);
           p3.addPoint(0, getHeight());
@@ -60,6 +71,7 @@ public class MyPanelClass extends JPanel {
           g.setColor(Color.BLUE);
           g.fillPolygon(p3);
           
+          //Estrella
 		  Polygon p2 = new Polygon();
           p2.addPoint(x1 + 25, y1 + 83);
           p2.addPoint(x1 + 41, y1 + 83);
